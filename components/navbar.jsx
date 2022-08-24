@@ -5,10 +5,8 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-
-  const [color, setColor] = useState('transparent')
-
-  const [textColor, setTextColor] = useState('black')
+  const [color, setColor] = useState('transparent');
+  const [textColor, setTextColor] = useState('white');
 
   const handleNav = () => {
     setNav(!nav);
@@ -17,18 +15,18 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('000000')
-        setTextColor('#ffffff')
+        setColor('#ffffff')
+        setTextColor('#000000')
       } else {
         setColor('transparent')
-        setTextColor('000000')
+        setTextColor('#ffffff')
       }
     };
     window.addEventListener('scroll', changeColor);
-  })
+  }, []);
 
   return (
-    <nav style={{ backgroundColor: `${color}` }} className="relative container mx-auto p-6 ease-in duration-300">
+    <div style={{ backgroundColor: `${color}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex items-center justify-between">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>Logo</h1>
@@ -52,8 +50,8 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Button */}
-        <div onClick={handleNav} className='block sm:hidden z-10 cursor-pointer'>
-          {nav ? <AiOutlineClose size={20} style={{ color: `${textColor}` }} /> : <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />}
+        <div onClick={handleNav} className='block sm:hidden cursor-pointer z-10'>
+          {nav ? <AiOutlineClose size={20} style={{ color: "black" }} /> : <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />}
         </div>
         {/* Mobile Menu */}
         <div className={
@@ -81,7 +79,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav >
+    </div>
   )
 }
 
