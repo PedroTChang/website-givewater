@@ -8,6 +8,7 @@ module.exports = {
   images: {
     domains: [
       'i.imgur.com',
-    ]
+    ],
+    path: '/_next/image',
   }
 }
