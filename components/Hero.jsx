@@ -31,15 +31,22 @@ const Hero = ({ heading, message }) => {
      <div className='min-h-screen flex flex-col items-center justify-center'>
       <div className='absolute w-full h-screen bg-fixed bg-center bg-cover custom-img'/>
         <div className={`flex-grow-0 pt-10 transition-opacity duration-1000`}>
-
       </div>
       <div className='p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex-1 flex items-center justify-center flex-col'>
         <h1 className='mb-6 text-4xl xl:text-5xl'>Give Water Give Life</h1>
-        <h2 className='mb-2 text-2xl xl:text-3xl tracking-tight'>
-          <span>Mission</span>{' '}<span>Statement</span>
+        <h2 className='pb-6 mb-2 text-2xl xl:text-3xl tracking-tight'>
+          <span>{message}</span>
         </h2>
+       <button className="px-7 py-2 text-3xl border rounded-md">Donate</button>
       </div>
-        Placeholder
+
+        <div className='flex-grow-0 pb-20 md:pb-10 transition-all duration-1000'>
+          <Image
+            src='/arrow-down.png'
+            width={61}
+            height={35}
+            alt='scroll down'/>
+      </div>
     </div>
 
   )
