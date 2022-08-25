@@ -39,9 +39,6 @@ const Navbar = () => {
             <Link href="/story">Our Story</Link>
           </li>
           <li className='p-4'>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className='p-4'>
             <Link href="/donations">Donations</Link>
           </li>
           <li className='p-4'>
@@ -50,7 +47,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Button */}
-        <div onClick={handleNav} className='block sm:hidden cursor-pointer z-10'>
+        <div onClick={handleNav} className='py-5 pr-3 block sm:hidden cursor-pointer z-10'>
           {nav ? <AiOutlineClose size={20} style={{ color: "black" }} /> : <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />}
         </div>
         {/* Mobile Menu */}
@@ -66,9 +63,6 @@ const Navbar = () => {
             </li>
             <li className='p-4 text-4xl hover:text-blue-400'>
               <Link href="/story">Our Story</Link>
-            </li>
-            <li className='p-4 text-4xl hover:text-blue-400'>
-              <Link href="/projects">Projects</Link>
             </li>
             <li className='p-4 text-4xl hover:text-blue-400'>
               <Link href="/donations">Donations</Link>
