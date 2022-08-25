@@ -24,7 +24,7 @@ const About = () => {
         <div className='container mx-auto px-11'>
           <p className='leading-tight max-w-5xl mx-auto text-4xl tracking-tight'>
             <strong>Help us save lives. </strong>
-             According to Unicef, water contamination contributed “to the deaths of more than 70,000 Nigerian children under five”.
+             According to Unicef, water pollution contributes “to the deaths of more than 70,000 Nigerian children under five every year”.
           </p>
         <div className='py-10 leading-tight max-w-5xl mx-auto'>
             <img src='https://i.imgur.com/oGgQofV.jpg' />
