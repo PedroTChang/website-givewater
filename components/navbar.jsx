@@ -26,10 +26,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: `${color}` }} className="fixed left-0 top-0 w-full z-10 ease-in duration-300">
+    <div style={{ backgroundColor: `${color}` }} className="fixed left-0 top-0 w-full z-20 ease-in duration-300">
       <div className="max-w-[1240px] m-auto flex items-center justify-between">
         <Link href="/">
-          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>Logo</h1>
+          <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>GWGL</h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4'>
