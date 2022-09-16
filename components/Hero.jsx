@@ -40,7 +40,9 @@ const Hero = ({ heading, message }) => {
         <h2 className="pb-6 mb-2 text-left max-w-4xl text-2xl xl:text-3xl tracking-tight">
           <span>{message}</span>
         </h2>
-        <button className="px-7 py-2 text-3xl border rounded-md">Donate</button>
+        <Link href='https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=LHR9V54TNVMVC'>
+          <button className="px-7 py-2 text-3xl border rounded-md">Donate</button>
+        </Link>
       </div>
       <div className="flex-grow-0 z-10 pb-20 md:pb-10 transition-all duration-1000">
         <Image src="/arrow-down.png" width={61} height={35} alt="scroll down" />
